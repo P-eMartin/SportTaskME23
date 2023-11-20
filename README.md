@@ -25,7 +25,7 @@ The performance of each model is presented in terms of accuracy. The ranking met
 | Baseline | **.864** | .907 | .932 | .907 |
 | MMSys-SDNU | .746 | .89 | .822 | .814 |
 | NathanSadoun | .814 | **.949** | .932 | .915 |
-| MMSys-SDNU | .814 | .924 | **.941** | **.924** |
+| SSN-SVJ | .814 | .924 | **.941** | **.924** |
 
 ## Detection subtask
 

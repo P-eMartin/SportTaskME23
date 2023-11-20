@@ -40,7 +40,7 @@ find -type f -exec md5sum "{}" + > MD5SUMS
 To have access to the data:
 1. register to MediaEval workshop (free) with your **institutional** email address (gmail, gmx, outlook addresses... will not be accepted). See the [MediaEval website](https://multimediaeval.github.io/editions/2023/) to register.
 2. send to the MediaEval organizers the [MediaEval data agreement](https://multimediaeval.github.io/editions/2023/docs/MediaEval2023_UsageAgreement.pdf) filled for our task (pages 1, 2, 3 and 8). Instructions are on the document.
-3. by accessing the data, you agree to the [Particular Conditions](Particular_conditions2023.pdf) of usage of the data.
+3. by accessing the data, you agree to the [Particular Conditions](Particular_conditions2022.pdf) of usage of the data.
 To formally accept them, send an email to ![](image1.png) with: « I Accept the Usage Conditions » in the email body.
 
 Once these 3 steps performed, you will receive an username and password to download the data.

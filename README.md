@@ -1,6 +1,6 @@
 <!-- # please respect the structure below-->
-*See the [MediaEval 2022 webpage](https://multimediaeval.github.io/editions/2022/) for information on how to register and participate.* <br>
-*See the [Sport Task MediaEval 2022 webpage](https://multimediaeval.github.io/editions/2022/tasks/sportsvideo/) for information on the task.*
+*See the [MediaEval 2023 webpage](https://multimediaeval.github.io/editions/2023/) for information on how to register and participate.* <br>
+*See the [Sport Task MediaEval 2023 webpage](https://multimediaeval.github.io/editions/2023/tasks/sportsvideo/) for information on the task.*
 
 # Introduction
 
@@ -38,9 +38,9 @@ find -type f -exec md5sum "{}" + > MD5SUMS
 ```
 -->
 To have access to the data:
-1. register to MediaEval workshop (free) with your **institutional** email address (gmail, gmx, outlook addresses... will not be accepted). See the [MediaEval website](https://multimediaeval.github.io/editions/2022/) to register.
-2. send to the MediaEval organizers the [MediaEval data agreement](https://multimediaeval.github.io/editions/2022/docs/MediaEval2022_UsageAgreement.pdf) filled for our task (pages 1, 2, 3 and 8). Instructions are on the document.
-3. by accessing the data, you agree to the [Particular Conditions](Particular_conditions2022.pdf) of usage of the data.
+1. register to MediaEval workshop (free) with your **institutional** email address (gmail, gmx, outlook addresses... will not be accepted). See the [MediaEval website](https://multimediaeval.github.io/editions/2023/) to register.
+2. send to the MediaEval organizers the [MediaEval data agreement](https://multimediaeval.github.io/editions/2023/docs/MediaEval2023_UsageAgreement.pdf) filled for our task (pages 1, 2, 3 and 8). Instructions are on the document.
+3. by accessing the data, you agree to the [Particular Conditions](Particular_conditions2023.pdf) of usage of the data.
 To formally accept them, send an email to ![](image1.png) with: « I Accept the Usage Conditions » in the email body.
 
 Once these 3 steps performed, you will receive an username and password to download the data.
@@ -51,7 +51,7 @@ Use the following commands to clone this repo and download the data (replace `US
 git clone https://github.com/ccp-eva/SportTaskME22.git
 cd SportTaskME22
 # Download data in repo
-wget --user=USER --password='PASSWORD' -r -np -nH --cut-dirs=4 https://www.labri.fr/projet/AIV/MediaEval/2022/data/
+wget --user=USER --password='PASSWORD' -r -np -nH --cut-dirs=4 https://www.labri.fr/projet/AIV/MediaEval/2023/data/
 # Check download is correct
 cd data/
 md5sum -c MD5SUMS

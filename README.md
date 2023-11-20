@@ -33,7 +33,7 @@ The detection subtask is evaluated with regard to the Global IoU metric and the 
 
 | Model	| IoU | mAP |
 | :---: | :---: | :---: |
-| Baseline | **.515** | **131** |
+| Baseline | **.515** | **.131** |
 
 # Baseline
 In order to help participants in their submission, to process videos, annotation files and deep learning techniques, we provide a baseline in this git which is formatted to process the provided data by the task organizers.

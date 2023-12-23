@@ -5,18 +5,26 @@
 # Introduction
 
 Running since 2019, this task was focused during the first two years on the classification of temporally segmented videos of single table tennis strokes.
-Since the third edition of the task, two subtasks have been proposed. The dataset also has been enriched this year with new and more diverse stroke samples.
+Since the third edition of the task, two subtasks have been proposed. This year, the task is merged with SwimTrack and offers subtasks on both swimming and table tennis sports. This baseline focuses only two of the subtasks:
 
-***Subtask 1 :*** is a classification task: participants are required to build a classification system that automatically labels video segments according to a performed stroke. There are 20 possible stroke classes and an additional non-stroke class.
 
-***Subtask 2 :***  is a more challenging subtask proposed since last year: the goal here is to detect if a stroke has been performed, whatever its class, and to extract its temporal boundaries. The aim is to be able to distinguish between moments of interest in a game (players performing strokes) from irrelevant moments (picking up the ball, having a break…). This subtask can be a preliminary step for later recognizing a stroke that has been performed.
- 
+***Subtask 2.1:***  is a more challenging subtask proposed since last year: the goal here is to detect if a stroke has been performed, whatever its class, and to extract its temporal boundaries. The aim is to be able to distinguish between moments of interest in a game (players performing strokes) from irrelevant moments (picking up the ball, having a break…). This subtask can be a preliminary step for later recognizing a stroke that has been performed.
 
-The organizers encourage the use of the method developed for subtask 1 to solve subtask 2. Participants are also invited to use the provided baseline as a starting point in their investigation. Finally, participants are encouraged to make their code public with their submission.
+***Subtask 3.1:*** is a classification task: participants are required to build a classification system that automatically labels video segments according to a performed stroke. There are 20 possible stroke classes and an additional non-stroke class.
+
+The organizers encourage the combination of the methods in the subtasks and also cross-disciplinary. Participants are also invited to use the provided baseline as a starting point in their investigation. Finally, participants are encouraged to make their code public with their submission.
 
 # Leaderboard
 
-## Classification subtask
+## Subtask 2.1: Stroke detection in Table Tennis
+
+The detection subtask is evaluated with regard to the Global IoU metric and the mAP (highest is the best), mAP being the ranking metric.
+
+| Model	| IoU | mAP |
+| :---: | :---: | :---: |
+| Baseline | **.515** | **.131** |
+
+## Subtask 3.1: Stroke Classification in Table Tennis
 
 The performance of each model is presented in terms of accuracy. The ranking metric is the overall accuracy.
 
@@ -27,13 +35,7 @@ The performance of each model is presented in terms of accuracy. The ranking met
 | NathanSadoun | .814 | **.949** | .932 | .915 |
 | SSN-SVJ | .814 | .924 | **.941** | **.924** |
 
-## Detection subtask
 
-The detection subtask is evaluated with regard to the Global IoU metric and the mAP (highest is the best), mAP being the ranking metric.
-
-| Model	| IoU | mAP |
-| :---: | :---: | :---: |
-| Baseline | **.515** | **.131** |
 
 # Baseline
 In order to help participants in their submission, to process videos, annotation files and deep learning techniques, we provide a baseline in this git which is formatted to process the provided data by the task organizers.
@@ -128,15 +130,6 @@ In addition, the classification task model was tested to perform segmentation an
 
 ## Performance       
 
-### Classification subtask
-
-Performance of each model is presented according to each decision method in term on global classification accuracy in the folowwing table.
-
-| Model | No Window	| Vote | Mean | Gaussian |
-| :---: | :---: | :---: | :---: | :---: |
-| V1 | .847 | .839 | .856 | .856 |
-| V2 | .856 | .822 | .831 | **.864** |
-
 ### Detection subtask
 
 The detection subtask is evaluated with regard to the Global IoU metric and the mAP (highest is the best).
@@ -186,6 +179,14 @@ Here a sliding window with step one is used on the test videos. The outputs are 
 | V2 Class. Neg VS all | .000506 | .00173 | .00237 |
 | V2 Class. Neg VS sum(all) | .00145 | .00185 | .00261 |
 
+### Classification subtask
+
+Performance of each model is presented according to each decision method in term on global classification accuracy in the folowwing table.
+
+| Model | No Window	| Vote | Mean | Gaussian |
+| :---: | :---: | :---: | :---: | :---: |
+| V1 | .847 | .839 | .856 | .856 |
+| V2 | .856 | .822 | .831 | **.864** |
 
 # Submission
 
@@ -257,12 +258,12 @@ For example:
 
 Thank you for your participation.
 
-## Working Note paper
+## Working Note Paper
 
-After your submition, you will be asked to submit a Working Note paper to share your method, implementation and results. We strongly advice to make your implementation available on github and share its link. Please report the baseline results for comparison.
+After your submission, you will be asked to submit a Working Note paper to share your method, implementation and results. We strongly advise you to make your implementation available on GitHub and share its link. Please report the baseline results for comparison.
 
-Guideline to write your paper is available [there](https://docs.google.com/document/d/12uSn0rRYxa3buiFNEbpa46dKsHOyqV2PHU_joRGMHRw/edit?usp=sharing). Latex template can de downloaded from [here](https://drive.google.com/file/d/1SMXWs-i4DKEUdblvzYaqvPuHLYHdBlQx/view?usp=sharing). Please update the shortitle command to fit out task with:
-`\renewcommand{\shorttitle}{Sport Task}`
+Guideline to write your paper is available [there](https://docs.google.com/document/d/1HcAx14RVuxqDEi-1SJJRwhHhzC_V-Ktpw-9jn5dg0-0/edit#heading=h.b40noxg68mvn). Latex template can de downloaded from [here](https://drive.google.com/file/d/1hWorTTyJzLBiFJmtTzvF78YBNnSShw3W). Please update the shorttitle command to fit our task with:
+`\renewcommand{\shorttitle}{SportsVideo}`
 
 Please cite the overview paper describing the task and the baseline paper. See next section.
 
@@ -271,6 +272,34 @@ Please cite the overview paper describing the task and the baseline paper. See n
 To cite this work, we invite you to include some previous work. Find the bibTex below.
 
 ```
+@inproceedings{conf/mediaeval/2023/baseline,
+  author	= {Pierre{-}Etienne Martin},
+  title 	= {Baseline Method for the Sport Task of MediaEval 2023 3D CNNs using Attention Mechanisms for Table Tennis Stoke Detection and Classification.},
+  booktitle = {Working Notes Proceedings of the MediaEval 2023 Workshop, Amsterdam,
+        	The Netherlands and Online and Online, 1-2 February 2024},
+   series	= {{CEUR} Workshop Proceedings},
+   publisher = {CEUR-WS.org},
+  year  	= {2023}
+}
+
+@inproceedings{conf/mediaeval/2023/sporttask,
+  author    = {Aymeric Erades and
+               Pierre{-}Etienne Martin and
+               Romain Vuillemot
+               Boris Mansencal and
+               Renaud P{\'{e}}teri and
+               Julien Morlier and
+               Stefan Duffner and
+               Jenny Benois{-}Pineau
+               },
+  title     = {Sports{V}ideo: A Multimedia Dataset for Event and Position Detection in Table Tennis and Swimming},
+  booktitle = {Working Notes Proceedings of the MediaEval 2023 Workshop, Amsterdam,
+            The Netherlands and Online, 1-2 February 2024},
+   series    = {{CEUR} Workshop Proceedings},
+   publisher = {CEUR-WS.org},
+  year      = {2023}
+}
+
 @inproceedings{mediaeval/Martin/2022/overview,
   author    = {Pierre{-}Etienne Martin and
                Jordan Calandre and
